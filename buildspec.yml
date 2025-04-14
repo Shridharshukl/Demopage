@@ -1,0 +1,33 @@
+version: 0.2
+
+env:
+  parameter-store:
+    DOCKER_USER: /App/Dockeruser
+    DOCKER_PASS: /App/Dockerpass
+
+  variables:
+    DOCKER_URL: docker.io  
+    
+phases:
+  install:
+    runtime-versions:
+      python: 3.11
+    commands:
+      - echo "Installing dependencies..."
+
+  pre_build:
+    commands:
+      - echo "Logging in to Docker Hub..."
+
+  build:
+    commands:
+      - echo "Building Docker image..."
+
+  post_build:
+    commands:
+      - echo "Build completed successfully!"
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: "."
