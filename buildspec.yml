@@ -2,8 +2,8 @@ version: 0.2
 
 env:
   parameter-store:
-    DOCKER_USER: /App/Dockeruser
-    DOCKER_PASS: /App/Dockerpass
+    DOCKER_USER: /demo/docker-credencials/username
+    DOCKER_PASS: /demo/docker-credencials/password
 
   variables:
     DOCKER_URL: docker.io  
