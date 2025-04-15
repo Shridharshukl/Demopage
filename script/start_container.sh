@@ -4,6 +4,8 @@ set -e
 
 echo "Check if Docker is installed..."
 
+sudo dpkg --configure -a
+
 if ! command -v docker &> /dev/null
 then
     echo "Docker not found. Installing Docker..."
